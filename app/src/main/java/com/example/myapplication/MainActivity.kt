@@ -1,6 +1,8 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -9,8 +11,20 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.aulaid)
+        val botao = findViewById<Button>(R.id.btnProxima)
+        val texto = findViewById<EditText>(R.id.editValor)
 
-        setContentView(R.layout.exercicio_01)
+
+        botao.text = "Oi testando"
+
+        botao.setOnClickListener {
+            botao.text = texto.text
+        }
+
+
+
+
 
 
         }
